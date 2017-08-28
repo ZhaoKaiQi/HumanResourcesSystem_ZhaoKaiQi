@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--配置 -->
+<configuration>
+	<!--进行数据库连接配置文件加载 -->
+	<properties resource="dbconfig.properties" />
+	<!--全局设置 -->
+	<settings>
+		<!--使用二级缓存，默认为false -->
+		<setting name="cacheEnabled" value="true" />
+	</settings>
+
+	<!-- 别名 -->
+	<typeAliases>
+		<!--配置实体类的包名 -->
+		<package name="com.qf.entity" />
+	</typeAliases>
+	
+	<!--环境,就是数据库连接方面的信息 一个项目可以配置多个数据库环境，但是只能一个起作用 default：哪个环境起作用 -->
+	<environments default="development">
+		<!--数据库类型的连接信息 -->
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driverpath}" />
+				<property name="url" value="${dburl}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+				<property name="poolMaximumActiveConnections" value="5" />
+			</dataSource>
+		</environment>
+	</environments>
+	<!--映射文件 -->
+	<mappers>
+		<!--基于包，实际使用 -->
+		<package name="com.qf.mapper" />
+	</mappers>
+
+</configuration>

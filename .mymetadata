@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name=" HumanResourcesSystem_ZhaoKaiQi"
+  id="myeclipse.1499590332756"
+  context-root="/HumanResourcesSystem_ZhaoKaiQi"
+  j2ee-spec="5.0"
+  archive=" HumanResourcesSystem_ZhaoKaiQi.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
